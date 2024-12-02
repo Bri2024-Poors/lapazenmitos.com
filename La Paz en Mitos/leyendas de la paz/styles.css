@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+.container {
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    animation: fadeIn 1s ease-in-out;
+    position: relative;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ff4081;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.images {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.image {
+    width: 150px; /* Tamaño fijo para las imágenes circulares */
+    height: 150px; /* Tamaño fijo para mantener proporción */
+    border-radius: 50%; /* Hace las imágenes circulares */
+    object-fit: cover; /* Hace que la imagen se ajuste dentro del contenedor sin deformarse */
+    transition: transform 0.3s;
+}
+
+.image:hover {
+    transform: scale(1.1);
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #ff4081;
+}
+
+.mouse-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background.jpg'); /* Cambia 'background.jpg' por tu imagen de fondo */
+    background-size: cover;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.abstract-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.shape-circle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    opacity: 0.3;
+    pointer-events: none;
+    animation: float 3s ease-in-out infinite;
+}
+
+.shape-triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;  
+    border-right: 150px solid transparent; 
+    border-bottom: 300px solid rgba(255, 255, 255, 0.1);
+    opacity: 0.3;
+    pointer-events: none;
+    border-radius: 15px;
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px); /* Movimiento más amplio */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Efecto de enfoque alrededor del mouse */
+.mouse-effect {
+    position: absolute;
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    pointer-events: none; 
+    transition: opacity 0.3s;
+}

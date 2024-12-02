@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Effect</title>
+   <link rel="stylesheet" href="estilos.css">
+   <link rel="stylesheet" href="scrolling-horizontal/estilos.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="background"></div>
+        <div class="content">
+            <h1 class="title">Casas embrujadas de LaPaz</h1>
+            <button class="button">
+                <div class="navbar">
+                <a href="../ntw-lpz/casas de la paz.html" class="catalogo">Mira que casas son</a></button>
+            </div>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="imagenes/casa.jpg" alt="Casa Matusita">
+                    <div class="description">
+                        <h3>La Casa Matusita</h3>
+                        <p>Una de las casas más aterradoras con historias paranormales en cada rincón.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagenes/cementerio.jpg" alt="Cementerio General">
+                    <div class="description">
+                        <h3>El Cementerio General</h3>
+                        <p>Un lugar lleno de misterios y leyendas urbanas que erizan la piel.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagenes/calle jaen.jpg" alt="Calle Jaén">
+                    <div class="description">
+                        <h3>La Calle Jaén</h3>
+                        <p>Conocida por sus fantasmas y fenómenos inexplicables.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagenes/hotel.jpg" alt="Hotel del Terror">
+                    <div class="description">
+                        <h3>El Hotel del Terror</h3>
+                        <p>Sus huéspedes cuentan historias de espíritus que no dejan dormir.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagenes/animas.jpg" alt="Puente de las Ánimas">
+                    <div class="description">
+                        <h3>El Puente de las Ánimas</h3>
+                        <p>Un lugar donde se escuchan lamentos en la noche.</p>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+    
+    
+
+    <script>
+        const background = document.querySelector('.background');
+
+        document.addEventListener('mousemove', (e) => {
+            
+            const x = e.clientX / window.innerWidth - 0.5; 
+            const y = e.clientY / window.innerHeight - 0.5; 
+
+        
+            background.style.transform = `translate(${x * 15}px, ${y * 15}px)`; 
+        });
+    </script>

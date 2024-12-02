@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Paz en Mitos</title>
+
+    <!-- Importar W3.CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+        /* Reset y estilo base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('fondo.jpg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 100vh; /* Altura completa de la pantalla */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Encabezado */
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #db681c;
+        }
+
+        /* Contenedor de contenido */
+        .content-container {
+            display: flex;
+            flex: 1; /* Para que ocupe todo el espacio disponible */
+            align-items: center;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .content-container img {
+            width: 50%; /* Imagen ocupa la mitad del ancho */
+            height: 100%; /* Imagen ocupa toda la altura del contenedor */
+            object-fit: cover; /* Asegura que la imagen mantenga proporción */
+            border-radius: 10px;
+        }
+
+        .text-container {
+            width: 45%; /* Texto ocupa casi la mitad */
+            color: white;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #ffffff;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: black;
+            color: white;
+        }
+        header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(34, 34, 34, 0.7); /* Fondo oscuro con opacidad */
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+.logo-button {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f00; /* Color rojo sangre */
+    text-decoration: none; /* Sin subrayado */
+    padding: 10px 20px; /* Espaciado interno para simular un botón */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: transparent; /* Sin fondo */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+}
+
+.logo-button:hover {
+    background-color: #f00; /* Fondo rojo al hacer hover */
+    color: #000; /* Cambia el texto a negro al hacer hover */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+    position: relative; /* Para efectos de subrayado */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f00; /* Color rojo sangre */
+    font-weight: 600;
+    font-family: 'Creepster', cursive; /* Fuente temática */
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+nav ul li a:hover {
+    color: #0f0; /* Color verde fosforescente al hacer hover */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #f00; /* Subrayado rojo */
+    bottom: -5px; /* Posición del subrayado */
+    left: 0;
+    transform: scaleX(0); /* Oculto por defecto */
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1); /* Se muestra al hacer hover */
+}
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <a href="../lppaginadeterror/inicio.html" class="logo-button">La Paz en Mitos</a> <!-- Convertido en un botón -->
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../leyendas de la paz/Categorías.html">Categorías</a></li>
+                <li><a href="">Contexto Histórico</a></li>
+                <li><a href="">Curiosidades</a></li>
+                <li><a href="../lpzblog/vlog.html">Blog</a></li>
+                <li><a href="../leyendas de la paz/nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <!-- Contenido principal -->
+    <div class="content-container">
+        <!-- Imagen -->
+        <img src="imagen.jpg" alt="Ejemplo de Imagen">
+
+        <!-- Texto -->
+        <div class="text-container">
+            <h2>Los Oscuros Mitos de la Paz</h2>
+            <p>
+                Dicen que la paz es solo calma y silencio... ¡pero no te dejes engañar! Detrás de cada acuerdo superficial acechan verdades ocultas, injusticias latentes y tensiones que jamás desaparecen. La paz no es lo que parece; a veces es un monstruo disfrazado, esperando su momento para desatar el caos. ¿Te atreves a descubrir lo que realmente esconde?
+                Y cuando ese monstruo se revela, ya no hay vuelta atrás. Las máscaras caen y las tensiones dormidas despiertan con una fuerza devastadora. Cada promesa incumplida, cada injusticia ignorada, regresa como una sombra que se extiende sobre Todo la paz, que antes parecía un respiro, se convierte en el preludio del caos, un abismo oscuro que engulle todo a su paso. ¿Puedes escuchar el crujido de la calma rompiéndose? La verdadera pesadilla.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Relatos Aterradores</p>
+    </footer>
+
+</body>
+</html>
+

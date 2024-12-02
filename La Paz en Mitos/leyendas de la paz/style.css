@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000; /* Fondo negro */
+    color: #fff;
+    overflow: hidden; /* Evita que el contenido desbordado sea visible */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(34, 34, 34, 0.7); /* Fondo oscuro con opacidad */
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+.logo-button {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f00; /* Color rojo sangre */
+    text-decoration: none; /* Sin subrayado */
+    padding: 10px 20px; /* Espaciado interno para simular un botón */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: transparent; /* Sin fondo */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+}
+
+.logo-button:hover {
+    background-color: #f00; /* Fondo rojo al hacer hover */
+    color: #000; /* Cambia el texto a negro al hacer hover */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+    position: relative; /* Para efectos de subrayado */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f00; /* Color rojo sangre */
+    font-weight: 600;
+    font-family: 'Creepster', cursive; /* Fuente temática */
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+nav ul li a:hover {
+    color: #0f0; /* Color verde fosforescente al hacer hover */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #f00; /* Subrayado rojo */
+    bottom: -5px; /* Posición del subrayado */
+    left: 0;
+    transform: scaleX(0); /* Oculto por defecto */
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1); /* Se muestra al hacer hover */
+}
+
+.projects {
+    position: relative; /* Para que los hijos con 'position: absolute' se coloquen dentro de esta sección */
+    height: 100vh;
+    overflow: hidden; /* Asegura que no se muestren elementos fuera de esta área */
+}
+
+/* Estilos para las imágenes desordenadas */
+.project {
+    position: absolute;
+    opacity: 0.2; /* Baja opacidad inicial */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transición para opacidad y escala */
+    overflow: hidden; /* Evita que el aura se desborde fuera de la imagen */
+}
+
+.project::after {
+    content: '';
+    position: absolute;
+    top: -20%; /* Ajustar para un aura más grande */
+    left: -20%; /* Ajustar para un aura más grande */
+    right: -20%; /* Ajustar para un aura más grande */
+    bottom: -20%; /* Ajustar para un aura más grande */
+    background: rgba(255, 255, 255, 0.3); /* Aura blanca con opacidad */
+    border-radius: 10%; /* Bordes redondeados para el aura */
+    opacity: 0; /* Comienza oculto */
+    transition: opacity 0.5s ease; /* Transición suave para el aura */
+    z-index: -1; /* Asegura que el aura esté detrás de la imagen */
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5); /* Efecto de sombra difusa */
+}
+
+/* Cuando el usuario pasa el mouse sobre la imagen */
+.project:hover {
+    opacity: 1; /* Opacidad completa al hacer hover */
+    transform: scale(1.1); /* Ligero zoom */
+}
+
+.project:hover::after {
+    opacity: 1; /* Muestra el aura al hacer hover */
+}
+
+.project img {
+    max-width: 300px; /* Tamaño máximo de las imágenes */
+    width: 100%;
+    height: auto;
+}
+
+/* Colocación aleatoria de las imágenes */
+.project:nth-child(1) {
+    top: 10%;
+    left: 15%;
+}
+
+.project:nth-child(2) {
+    top: 50%;
+    left: 35%;
+}
+
+.project:nth-child(3) {
+    top: 30%;
+    left: 70%;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222; /* Fondo oscuro */
+    color: #fff;
+    border-top: 1px solid #333;
+}
+
+/* Estilo para el rastro de luz */
+.light-trail {
+    position: absolute;
+    width: 15px; /* Aumentar el ancho del rastro */
+    height: 15px; /* Aumentar el alto del rastro */
+    border-radius: 50%; /* Hacerlo circular */
+    background-color: rgba(255, 255, 255, 0.8); /* Luz blanca */
+    pointer-events: none; /* No interferir con eventos del mouse */
+}
+.mouse-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/patron-fisuras-elementos-graves-elementos-terror-doodle_337399-180.avif'); /* Cambia 'background.jpg' por tu imagen de fondo */
+    background-size: cover;
+    opacity: 0.02;
+    pointer-events: none;
+}
